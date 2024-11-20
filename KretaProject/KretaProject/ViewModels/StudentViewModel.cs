@@ -7,5 +7,8 @@ namespace KretaProject.ViewModels
     {
         [ObservableProperty]
         private Student _student=new Student();
+        [ObservableProperty]
+        private List<string> _educationLevels = new List<string> {"érettségi", "szakmai érettségi", "szakmai vizsga" };
     }
+
 }
