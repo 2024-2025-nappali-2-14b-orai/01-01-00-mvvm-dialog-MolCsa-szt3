@@ -29,7 +29,7 @@
         }
         public override string ToString()
         {
-            return $"Username:{Name}; Email:{Email};Account Created:{CreationDate.ToShortDateString};Matches:{Matches}; Winrate:{Winrate}";
+            return $"Username:{Name}; Email:{Email};Account Created:{CreationDate};Matches:{Matches}; Winrate:{Winrate}";
         }
     }
 }
