@@ -21,7 +21,7 @@ namespace KretaProject.ViewModels
         {
             if (player.PlayerCheck() != "") 
             {
-                MessageBox.Show(player.PlayerCheck(),"Invalid value(s)!");
+                MessageBox.Show(player.PlayerCheck(),"Invalid value(s)!",MessageBoxButton.OK,MessageBoxImage.Error);
             }
             else
             {
