@@ -3,6 +3,7 @@ using CommunityToolkit.Mvvm.Input;
 using KretaProject.Models;
 using System.Collections.ObjectModel;
 using System.Printing;
+using System.Windows;
 
 namespace KretaProject.ViewModels
 {
@@ -18,10 +19,17 @@ namespace KretaProject.ViewModels
         [RelayCommand]
         public void DoSave(Player player)
         {
-            Players.Add(player);
-            Player = new Player();
-            Player.CreationDate = DateTime.Now;
-            OnPropertyChanged(nameof(Player));
+            if (player.PlayerCheck() != "") 
+            {
+                MessageBox.Show(player.PlayerCheck(),"Invalid value(s)!");
+            }
+            else
+            {
+                Players.Add(player);
+                Player = new Player();
+                Player.CreationDate = DateTime.Now;
+                OnPropertyChanged(nameof(Player));
+            }
         }
         [RelayCommand]
         public void DoNewPlayer()

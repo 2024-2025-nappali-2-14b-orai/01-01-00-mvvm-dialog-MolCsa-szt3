@@ -29,7 +29,19 @@
         }
         public override string ToString()
         {
-            return $"Username:{Name}; Email:{Email};Account Created:{CreationDate};Matches:{Matches}; Winrate:{Winrate}";
+            return $"Username:{Name}; Email:{Email}; Account Created:{CreationDate}; Matches:{Matches}; Winrate:{Winrate}";
+        }
+        public string PlayerCheck()
+        {
+            string issues = "";
+            if (Name.Length == 0) issues += "Missing username!\n";
+
+            if (Email.Length == 0) issues += "Missing email!\n";
+            else if (!Email.Contains("@") && !Email.Contains(".")) issues += "Invalid email address!\n";
+
+            if (Wins > Matches) issues += "Player can't have more wins than matches!\n";
+
+            return issues ;
         }
     }
 }
