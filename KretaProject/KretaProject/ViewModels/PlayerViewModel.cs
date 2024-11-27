@@ -10,7 +10,7 @@ namespace KretaProject.ViewModels
     public partial class PlayerViewModel : ObservableObject
     {
         [ObservableProperty]
-        private Player _player=new Player();
+        private Player _player=new Player();        
         [ObservableProperty]
         private ObservableCollection<Player> _players = new ObservableCollection<Player>();
         [ObservableProperty]
@@ -26,9 +26,9 @@ namespace KretaProject.ViewModels
             else
             {
                 Players.Add(player);
-                Player = new Player();
+                /*Player = new Player();
                 Player.CreationDate = DateTime.Now;
-                OnPropertyChanged(nameof(Player));
+                OnPropertyChanged(nameof(Player));*/
             }
         }
         [RelayCommand]

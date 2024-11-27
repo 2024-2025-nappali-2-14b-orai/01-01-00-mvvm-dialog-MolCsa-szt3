@@ -48,14 +48,14 @@
                  SelectedItem="{Binding SelectedPlayer}"
          />
         <StackPanel Orientation="Horizontal" Grid.Row="6" Grid.ColumnSpan="2">
-            <Button  Margin="0 10 2 2" HorizontalAlignment="Right" MinWidth="80" Content="Új adat"
+            <Button  Margin="0 10 2 2" HorizontalAlignment="Right" MinWidth="80" Content="New Data"
                 Command="{Binding DoNewPlayerCommand}"
                 />
-            <Button  Margin="0 10 2 2" HorizontalAlignment="Right" MinWidth="80" Content="Mentés"
+            <Button  Margin="0 10 2 2" HorizontalAlignment="Right" MinWidth="80" Content="Save"
                 Command="{Binding DoSaveCommand}"
-                CommandParameter="{Binding Player}"
+                CommandParameter="{Binding Player}" Click="Button_Click"
                 />
-            <Button Margin="0 10 2 2" HorizontalAlignment="Right" MinWidth="80" Content="Törlés" 
+            <Button Margin="0 10 2 2" HorizontalAlignment="Right" MinWidth="80" Content="Delete selected" 
                 Command="{Binding DoDeleteCommand}"
                 CommandParameter="{Binding SelectedPlayer}"
             />
