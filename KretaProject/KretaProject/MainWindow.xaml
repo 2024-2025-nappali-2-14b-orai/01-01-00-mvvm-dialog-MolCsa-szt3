@@ -38,8 +38,8 @@
         <TextBox Grid.Row="1" Grid.Column="1" Margin="2 2 2 2" Padding="0 2" Text="{Binding Player.Name}"></TextBox>
         <TextBox Grid.Row="2" Grid.Column="1" Margin="2 2 2 2" Padding="0 2" Text="{Binding Player.Email}"></TextBox>
         <DatePicker Grid.Row="3" Grid.Column="1" Margin="2 2 2 2" SelectedDate="{Binding Player.CreationDate}"></DatePicker>
-        <xwpftk:IntegerUpDown Grid.Row="4" Grid.Column="1" Margin="2 2 100 2" Minimum="0" Value="{Binding Player.Wins}"></xwpftk:IntegerUpDown>
-        <xwpftk:IntegerUpDown Grid.Row="5" Grid.Column="1" Margin="2 2 100 2" Minimum="0" Value="{Binding Player.Matches}"></xwpftk:IntegerUpDown>
+        <xwpftk:IntegerUpDown Grid.Row="4" Grid.Column="1" Margin="2 2 2 2" Minimum="0" Value="{Binding Player.Wins}"></xwpftk:IntegerUpDown>
+        <xwpftk:IntegerUpDown Grid.Row="5" Grid.Column="1" Margin="2 2 2 2" Minimum="0" Value="{Binding Player.Matches}"></xwpftk:IntegerUpDown>
         
         <ListBox Grid.Row="8"
                  Grid.ColumnSpan="2" 
