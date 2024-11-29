@@ -16,6 +16,11 @@ namespace KretaProject.ViewModels
         [ObservableProperty]
         private Player _selectedPlayer = new Player();
 
+        public PlayerViewModel()
+        {
+            Player.CreationDate = DateTime.Now; 
+        }
+
         [RelayCommand]
         public void DoSave(Player player)
         {
